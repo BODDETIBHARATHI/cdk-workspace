@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 class Employee{
 	private int empno;
@@ -30,39 +29,52 @@ class EmpManager{
      private Employee[] emp = new Employee[count];
       int i=0;
      public void create(Employee e){
-    	 System.out.println("create");
-    	 if(i<count) {
-    		 System.out.println("i= "+i);
-    		 emp[i] = e;
-    	 System.out.println(emp[i].getEmpno()+" , "+emp[i].getEname()+" , "+emp[i].getSalary() +" i="+i);
+    	 if (i == 10) {
+ 			System.out.print("We can't allocate more employees.");
+ 			return;
+ 		}
+    	 emp[i] = e;
     	 i++;
-    	 for(int j=0;j<i;j++) {
-  			System.out.println(emp[j].getEmpno()+" , "+emp[j].getEname()+" , "+emp[j].getSalary() + " i="+i+" ,j="+j);
-  		}
-    	 }
  	}
  	public void update(int itemno, Employee e){
- 		System.out.println("update");
- 		emp[itemno] = e;
- 	}
+ 		boolean updated = false;
+		for (int j = 0; j < i; j++) {
+
+			if (emp[j].getEmpno() == itemno) {
+				emp[j] = e;
+				updated = true;
+			}
+		}
+		if (updated == true) {
+			System.out.println("Updated Successfully");
+		} 
+		else {
+			System.out.println("Entry not found with given employee number.Please enter valid employee Id");
+		}
+	}
  	public void delete(int empno){  
- 		System.out.println("delete");
- 		System.out.println("i out = "+i);
- 		for(int j=0;j<i;j++) {
- 	 		System.out.println("in j loop i="+i+" , "+"j="+j);
- 			if(empno == emp[j].getEmpno()) {
- 				for(int k=j;k<i;k++) {
- 			 		System.out.println("in k loop i="+i+" , "+"j="+j+" , "+"k="+k);
- 					emp[k] = emp[k+1];
- 				}
+ 		int j, found=0;
+ 		for(j=0;j<i;j++) {
+ 			if(emp[j].getEmpno() == empno) {
+ 				found = 1;
+ 				break;
  			}
  		}
+ 		if(found == 0) {
+ 			System.out.println("There is no employee with given employee number. Please enter valid employee Id");
+ 			return ;
+ 		}
+ 				for(int k=j+1;k<i;k++) {
+ 					emp[k-1] = emp[k];
+ 				}
+ 				i--;
+ 				System.out.println("Employee with Id "+empno+" deleted successfully");
  	}
  	public void print()
  	{
- 		System.out.println("print");
+ 		System.out.println("EmployeeID  |  EmployeeName  |  EmployeeSalary");
  		for(int j=0;j<i;j++) {
- 			System.out.println(emp[j].getEmpno()+" , "+emp[j].getEname()+" , "+emp[j].getSalary() + " i="+i+" ,j="+j);
+ 			System.out.println(emp[j].getEmpno()+"           |        "+emp[j].getEname()+"       |       "+emp[j].getSalary());
  		}
  	}
 }
@@ -70,16 +82,16 @@ class EmpManager{
 public class LabAssignment3 {
 
 	public static void main(String[] args) {
+		// TODO Auto-generated method stub
         int ch;
         EmpManager em = new EmpManager();
-        Employee e = new Employee();
         Scanner sc=new Scanner(System.in);
         while(true) {
-        System.out.println("Enter 1 for create employee.\n Enter 2 for update employee.\nEnter 3 for delete employee.\nEnter 4 for printing employees.\nEnter 5 for exit ");
+        System.out.println("Enter 1 for create employee.\nEnter 2 for update employee.\nEnter 3 for delete employee.\nEnter 4 for printing employees.\nEnter 5 for exit ");
         ch = sc.nextInt();
         switch(ch) {
         case 1:
-                Employee e = new Employee();
+            Employee e = new Employee();
         	System.out.println("Enter employee id");
         	e.setEmpno(sc.nextInt());
         	System.out.println("Enter employee name");
@@ -89,11 +101,10 @@ public class LabAssignment3 {
         	em.create(e);
         	break;
         case 2:
-                Employee eu = new Employee();
-        	System.out.println("Enter the item number to update");
+            Employee eu = new Employee();
+        	System.out.println("Enter the employee number to update");
         	int itemno = sc.nextInt();
-        	System.out.println("Enter employee id");
-        	eu.setEmpno(sc.nextInt());
+        	eu.setEmpno(itemno);
         	System.out.println("Enter employee name");
         	eu.setEname(sc.next());
         	System.out.println("Enter employee salary");
