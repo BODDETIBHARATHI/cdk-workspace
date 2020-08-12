@@ -79,6 +79,7 @@ public class LabAssignment3 {
         ch = sc.nextInt();
         switch(ch) {
         case 1:
+                Employee e = new Employee();
         	System.out.println("Enter employee id");
         	e.setEmpno(sc.nextInt());
         	System.out.println("Enter employee name");
@@ -88,15 +89,16 @@ public class LabAssignment3 {
         	em.create(e);
         	break;
         case 2:
+                Employee eu = new Employee();
         	System.out.println("Enter the item number to update");
         	int itemno = sc.nextInt();
         	System.out.println("Enter employee id");
-        	e.setEmpno(sc.nextInt());
+        	eu.setEmpno(sc.nextInt());
         	System.out.println("Enter employee name");
-        	e.setEname(sc.next());
+        	eu.setEname(sc.next());
         	System.out.println("Enter employee salary");
-        	e.setSalary(sc.nextDouble());
-        	em.update(itemno, e);
+        	eu.setSalary(sc.nextDouble());
+        	em.update(itemno, eu);
         	break;
         case 3:
         	System.out.println("Enter the empid which you want to delete");
