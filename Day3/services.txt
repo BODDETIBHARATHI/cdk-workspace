@@ -1,0 +1,24 @@
+Data Structures:
+
+Array ---->          1) Can make Random access
+                     2) Need to be static allocation
+                     3) We will use index of the array for setting and putting the values into the array
+                     4) Array is used for storing homogenious type of data like storing list of all student names of a class
+
+
+LinkedList-------->  1) We have to make sequential access from the the head pointer because the curreent node address will be stored in the prevoius node and to access it we have to traverse the list from the head.
+                     2) We can do dynamic allocation for linked list as the numbers of nodes can increase
+                     3) In order to set a value to a node we have to store the address of that node in the previous node and for getting the value at that node we have to travese from the head in order to get the address of that node.
+                     4) We can use linked list to implement trees.
+                     
+
+Stack-------------> 1) It allows sequential access.
+                    2) It will have static allocation when implemeted using array and dynamic allocation when implemented with linked list
+                    3) Stack follows LIFO policy where the element inserted first will be removed last and the one inserted last will be removed first and it uses "Push and Pop" operations and a "Top" pointer to perform insert and delete.
+                    4) Stack will be used in undos and redos as it stores the sequnce of operations performed
+
+
+Queue------------>  1) It allows sequential access.
+                    2) It will have static allocation when implemeted using array and dynamic allocation when implemented with linked list
+                    3) Queue follows FIFO policy where the element inserted first will be removed first and the one inserted last will be removed last and it uses "enqueue and dequeue" and "Front and rear" pointer to perform these operations.
+                    4) Queue is mainly used in maintaining queues for passengers.
