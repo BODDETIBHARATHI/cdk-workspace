@@ -4,7 +4,6 @@ class Emp{
 	private String ename;
 	private double salary;
 	public Emp(int empid, String ename, double salary) {
-		// TODO Auto-generated constructor stub
 		this.empid = empid;
 		this.ename = ename;
 		this.salary = salary;
@@ -32,7 +31,6 @@ class Emp{
 public class Lab3 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
         Emp[] e = new Emp[5];
         Scanner sc = new Scanner(System.in);
         for(int i=0;i<5;i++) {
