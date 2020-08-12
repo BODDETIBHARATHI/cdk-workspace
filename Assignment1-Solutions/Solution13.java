@@ -41,10 +41,12 @@ public class Solution13 {
 		//char str[] = {'A', 'T', 'R', 'E'}; 
 		Scanner sc = new Scanner(System.in);
 		char str[] = new char[4];
+		System.out.println("Enter 4 characters");
 		for(int i=0;i<4;i++){
 			str[i] = sc.next().charAt(0);
 		}
 		int n = str.length; 
+		System.out.println("All Possible combinations of characters without repetition are ");
 		findPermutations(str, 0, n); 
 	} 
 
