@@ -1,0 +1,20 @@
+Lab 3 - queue (algorithm/flow
+Queue ( c++ -> flow of program)
+	Array
+		-> enqueue/add -> push an element in queue
+		-> dequeue/poll -> pull an element from queue
+    
+ ---------------------------------------------------------
+ 
+ Queue [ FIFO ]{
+    1) intialize front and rear end as 0, declare size of the queue.
+    2) Make the front and rear end pointing towards the first position of queue. 
+    3) Enqueue --->
+         a) If the size of the queue ia same as rear end then display queue is full
+         b) else insert the element into the queue and increament the rear end
+    4) Dequeue --->
+         a) if front and rear are equal then display queue as empty
+         b) else increment the front end so now the queue will now longer contain that element.
+ 
+ }
+ 
