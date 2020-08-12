@@ -1,0 +1,21 @@
+Linked list  -------->     
+           1) Initially head will be pointing to first node.
+           2) All the nodes will be pointing to next nodes address.
+           3) Last node will point to null.
+I) AddLast  ---->
+           -> Traverse towards the last node(until it encounters null)
+           -> Add address of new node to the last last node.
+           -> Make the newly added node points to null.
+II) AddFirst  ---->
+           -> Start with the head node.
+           -> Store the address of head to the new node and store the address of newly added node to the head pointer.
+III) Add E after B ---->
+           -> Initialize a pointer pointing towards starting node.
+           -> Traverse the pointer until it reaches node B.
+           -> Place the address stored in node B to node E and place the address of node E to node B.
+IV) Remove node at given index-------->
+           -> Initialize 2 pointers pointing towards head node.
+           -> Increment one pointer pointing towards next node while the other pointer pointing to the prevoius node.
+           -> Follow step 2 until we reach the specified node.
+           -> When we reach that specific node place the address stored in that node to the prevoius node(the other pointer will be pointing to the prevoius node).
+           -> By storing the address of the next node of the specified node the pointer before the prevoius node will now point towards the next node of the specified node and that specified node will be removed from the path.
