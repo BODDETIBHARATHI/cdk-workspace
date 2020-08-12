@@ -1,0 +1,14 @@
+Lab 4 - Binary Tree
+	https://www.geeksforgeeks.org/binary-tree-data-structure/
+	introduction - 1, 2, 3
+	1. Sequential Access / Random Access
+	2. Static Allocation/Dynamic Allocation
+	3. Policy for getting/putting numbers
+	4. uses
+  
+  
+  Binary Tree
+         -> Sequential access as traversing is donw from root.
+         -> Dynamic allocation as it is similar to linked list.
+         -> In order to place a value we have to traverse from root to that specific node where we want to insert the element and for getting a node value we have to traverse from root to that node using links.
+         -> File directory, hierarchial structures.
