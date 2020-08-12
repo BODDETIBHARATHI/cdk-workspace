@@ -27,7 +27,6 @@ class Lab2Helper
 public class Lab2 {
 
 	public static void main(String[] args) {
-		//System.out.println("Hello World");
 		
 		Lab2Helper helper = new Lab2Helper();
 		Coordinate co = new Coordinate();
@@ -42,11 +41,7 @@ public class Lab2 {
 		
 		System.out.println("in main before function call " + s1 +",  " + s2);
 		helper.printdemo(s1, s2);
-		System.out.println("in main after function call " + s1 +",  " + s2);
-		
-		
-	//	String s = helper.m1();
-	//	System.out.println(" s = " + s);
+		System.out.println("in main after function call " + s1 +",  " + s2);		
 	}
 
 }
