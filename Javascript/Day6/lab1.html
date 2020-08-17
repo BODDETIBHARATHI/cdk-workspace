@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+function test1(){
+	document.getElementById("empno").innerHTML= document.getElementById("empnum").value;
+	document.getElementById("empname").innerHTML= document.getElementById("emplname").value;
+	document.getElementById("empsal").innerHTML= document.getElementById("emplsal").value
+}
+
+</script>
+
+</head>
+<body>
+<table>
+<tr>
+<td>Employee Number :</td><td> <input type="text" id="empnum" /></td></tr>
+<tr>
+<td>Employee Name : </td><td><input type="text" id="emplname" /></td></tr>
+<tr>
+<td>Employee Salary :</td><td> <input type="text" id="emplsal" /></td></tr>
+</table>
+<input  id ="btn" type="button" value="Add" onclick="test1()" />
+<div id="mydiv">
+<table  border='1' style="background-color:cyan;">
+<tr>
+<th>Employee Number</th>
+<th>Employee Name</th>
+<th>Employee Salary</th>
+</tr>
+<tr>
+<td id="empno">  </td>
+<td id="empname">  </td>
+<td id="empsal">  </td>
+</tr>
+</table>
+</div>
+
+</body>
+</html>
