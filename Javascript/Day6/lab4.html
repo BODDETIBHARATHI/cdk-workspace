@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src="asgn.js"></script>
+
+<script type="text/javascript">
+var company = new Company();
+function add()
+{
+	var e= new Emp(document.getElementById("empno").value,
+	document.getElementById("ename").value,
+	 document.getElementById("salary").value,
+	 document.getElementById("email").value);
+	company.add(e);
+	console.log(e);
+	console.log(company.emparr)
+	//display_table(e);
+	
+	document.getElementById("mytbl").innerHTML= company.print();
+}
+
+</script>
+</head>
+<body >
+Empno: <input type="number" id="empno" name="empno"><br>
+Ename: <input type="text" id="ename" name="ename"><br>
+Salary: <input type="number" id="salary" name="salary"><br>
+Email: <input type="email" id="email" name="email"><br><br>
+<input type="button" value="Add"  onclick="add()"><br><br>
+
+<table border="1" id="mytbl" >
+
+</table>
+</body>
+</html>
