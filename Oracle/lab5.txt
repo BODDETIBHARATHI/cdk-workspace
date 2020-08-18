@@ -1,0 +1,23 @@
+Lab 5 - select  ( https://www.oracletutorial.com/oracle-basics/oracle-like/)
+Create table with given rows
+1. show all employee details where
+	name starts with "R"
+	name ends with "li"
+	name has "sh" 
+	salary - <,>,<=,>=, !=, between
+	deptno is IT
+	deptno is IT or FN (IN)
+	
+
+Commands----------->
+    -> select * from dept where ename like 'R%';
+    -> select * from dept where ename like '%li';
+    -> select * from dept where ename like '%sh%';
+    -> select * from dept where salary < 400;
+    -> select * from dept where salary > 500;
+    -> select * from dept where salary <= 400;
+    -> select * from dept where salary >= 500;
+    -> select * from dept where salary != 100;
+    -> select * from dept where salary between 400 and 500;
+    -> select * from dept where dept='IT';
+    -> select * from dept where dept IN('IT','FI');
